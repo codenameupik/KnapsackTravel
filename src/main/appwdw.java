@@ -526,4 +526,25 @@ public class appwdw {
 	{
 	     return jTextArea;
 	}*/
+	public void Knapsack() {
+		int[] waktukunjung = {' ', ' ', ' ', ' ', ' '};
+		int[] waktutempuh = {' ', ' ', ' ', ' ', ' '};
+		waktutempuh[0] = 3; //A-B
+		waktutempuh[1] = 4; //A-C
+		waktutempuh[2] = 6; //A-D
+		waktutempuh[3] = 1; //B-C
+		waktutempuh[4] = 7; //B-D
+		
+		waktukunjung[0] = 60; //A-B
+		waktukunjung[1] = 30; //A-C
+		waktukunjung[2] = 45; //A-D
+		waktukunjung[3] = 60; //B-C
+		waktukunjung[4] = 60; //B-D
+		
+		int[] waktutotal= {' ', ' ', ' ', ' ', ' '};;
+		for (int i=0;i<=4;i++){
+			waktutotal[i] = waktutempuh[i]+waktukunjung[i];
+		}
+		
+	}
 }

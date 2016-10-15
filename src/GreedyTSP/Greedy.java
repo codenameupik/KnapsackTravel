@@ -2,6 +2,7 @@ package GreedyTSP;
 
 public class Greedy {
    Matrik M=new Matrik();
+   MatriksTest MT=new MatriksTest();
    int[][] hasil=new int[9][9];
    int[] solusi=new int[10];
 //   char[] record=new char[100];
@@ -14,7 +15,7 @@ public class Greedy {
    }
    public void showHasil(){
    String temp="";
-   int row=1;
+   int row=3;
    int col=1;
    int cc=0;
    int rr=0;
@@ -24,7 +25,7 @@ public class Greedy {
    int i=0;
    int j=0;
    int ce=0;
-   solusi[1]=1;
+   solusi[1]=row;
    for (i=1;i<=8;i++) {
        for (j=1;j<=8;j++) {
            hasil[i][j]=1;
@@ -35,7 +36,7 @@ public class Greedy {
        if (cek>7) break;
     com=1000;
       
-        col=2;
+        col=1;
         while (col<8) {
             if (col>7) break;
             ce=0;
@@ -55,7 +56,7 @@ public class Greedy {
            jarak+=com;
             for (i=1;i<8;i++) {
                for (j=1;j<8;j++) {
-                   if (j==cc) hasil[i][j]=0;
+                   if (j==row) hasil[i][j]=0;
         }
    }
          
@@ -91,6 +92,9 @@ public class Greedy {
             System.out.print("Solusi : " + temp + "total waktu yang dibutuhkan " + jarak + " \n");
             for(int k=1;k<cek;k++){
             	System.out.print("Solusi : " + solusi[k] + " \n");
+            	//System.out.print(M.graph[4][3]);
+            	//MT.graph2[1][1]=10;
+            	//System.out.print(MT.graph2[1][1]);
             }
             
                }
